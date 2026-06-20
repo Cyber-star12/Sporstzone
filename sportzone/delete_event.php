@@ -1,0 +1,1 @@
+<?php require 'config/db.php'; require 'includes/auth.php'; requireAdmin(); $id=(int)($_GET['id']??0); $stmt=$pdo->prepare('DELETE FROM events WHERE id=?'); $stmt->execute([$id]); flash('success','Event deleted.'); header('Location: manage_events.php'); exit; ?>

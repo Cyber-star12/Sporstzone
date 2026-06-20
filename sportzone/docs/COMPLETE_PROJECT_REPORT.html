@@ -1,0 +1,1821 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sports Event Registration System - Project Report</title>
+    <style>
+        @page {
+            size: A4;
+            margin: 2cm;
+        }
+        body {
+            font-family: 'Times New Roman', Times, serif;
+            font-size: 12pt;
+            line-height: 1.5;
+            text-align: justify;
+            margin: 0;
+            padding: 0;
+        }
+        .page {
+            page-break-after: always;
+            min-height: 100%;
+            padding: 2cm;
+        }
+        .no-break {
+            page-break-after: avoid;
+        }
+        h1 {
+            font-size: 24pt;
+            text-align: center;
+            font-weight: bold;
+            margin: 0;
+            padding: 0;
+        }
+        h2 {
+            font-size: 16pt;
+            text-align: center;
+            font-weight: bold;
+            margin: 20pt 0 10pt 0;
+        }
+        h3 {
+            font-size: 14pt;
+            text-align: center;
+            font-weight: bold;
+            margin: 15pt 0 10pt 0;
+        }
+        h4 {
+            font-size: 12pt;
+            text-align: left;
+            font-weight: bold;
+            margin: 12pt 0 6pt 0;
+        }
+        p {
+            margin: 0 0 8pt 0;
+            text-align: justify;
+        }
+        .center {
+            text-align: center;
+        }
+        .bold {
+            font-weight: bold;
+        }
+        .underline {
+            text-decoration: underline;
+        }
+        .uppercase {
+            text-transform: uppercase;
+        }
+        .spacer {
+            height: 20pt;
+        }
+        .double-spacer {
+            height: 40pt;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 10pt 0;
+        }
+        th, td {
+            border: 1pt solid #000;
+            padding: 6pt;
+            text-align: left;
+            font-size: 11pt;
+        }
+        th {
+            background-color: #f0f0f0;
+            font-weight: bold;
+        }
+        .chapter-title {
+            font-size: 16pt;
+            font-weight: bold;
+            margin: 20pt 0 15pt 0;
+            text-align: left;
+            border-bottom: 1pt solid #000;
+            padding-bottom: 5pt;
+        }
+        .section-title {
+            font-size: 14pt;
+            font-weight: bold;
+            margin: 15pt 0 10pt 0;
+        }
+        .list-item {
+            margin-left: 20pt;
+            list-style-type: decimal;
+        }
+        .toc-entry {
+            margin-left: 20pt;
+            font-size: 12pt;
+        }
+        .figure-ref {
+            font-style: italic;
+        }
+        code {
+            font-family: 'Courier New', monospace;
+            font-size: 10pt;
+            background-color: #f5f5f5;
+            padding: 2pt 4pt;
+        }
+        pre {
+            font-family: 'Courier New', monospace;
+            font-size: 9pt;
+            background-color: #f5f5f5;
+            padding: 10pt;
+            overflow-x: auto;
+            border: 1pt solid #ccc;
+        }
+        .indent {
+            margin-left: 20pt;
+        }
+        .double-indent {
+            margin-left: 40pt;
+        }
+        hr {
+            border: none;
+            border-top: 1pt solid #000;
+            margin: 20pt 0;
+        }
+    </style>
+</head>
+<body>
+
+<!-- COVER PAGE -->
+<div class="page">
+    <div class="double-spacer"></div>
+    <div class="double-spacer"></div>
+
+    <h1>SPORTS EVENT REGISTRATION SYSTEM</h1>
+    <h1>(SportZone)</h1>
+
+    <div class="double-spacer"></div>
+    <div class="double-spacer"></div>
+
+    <h2>A PROJECT REPORT</h2>
+
+    <p class="center">Submitted in partial fulfillment of the requirements for the award of the</p>
+    <h3>DEGREE OF BACHELOR OF COMPUTER APPLICATIONS (BCA)</h3>
+
+    <p class="center">OF</p>
+
+    <h2>RANI CHANNAMMA UNIVERSITY, BELAGAVI</h2>
+
+    <div class="double-spacer"></div>
+    <div class="double-spacer"></div>
+
+    <p class="bold center">Submitted by:</p>
+
+    <table style="width: 80%; margin: 0 auto;">
+        <tr>
+            <td style="border: none;">Name:</td>
+            <td style="border: none;">____________________</td>
+            <td style="border: none;">USN:</td>
+            <td style="border: none;">____________________</td>
+        </tr>
+        <tr>
+            <td style="border: none;">Name:</td>
+            <td style="border: none;">____________________</td>
+            <td style="border: none;">USN:</td>
+            <td style="border: none;">____________________</td>
+        </tr>
+        <tr>
+            <td style="border: none;">Name:</td>
+            <td style="border: none;">____________________</td>
+            <td style="border: none;">USN:</td>
+            <td style="border: none;">____________________</td>
+        </tr>
+    </table>
+
+    <div class="spacer"></div>
+
+    <p class="bold center">Under the Guidance of:</p>
+    <p class="center">Guide Name: ____________________</p>
+
+    <div class="spacer"></div>
+
+    <p class="center">Institution: PeopleTree Education Society's College of Bachelor of Computer Application</p>
+    <p class="center">BCA Department</p>
+    <p class="center">Rani Channamma University, Belagavi</p>
+    <p class="center">Karnataka, India</p>
+    <p class="center">Academic Year: 2025-26</p>
+</div>
+
+<!-- BONAFIDE CERTIFICATE -->
+<div class="page">
+    <div class="double-spacer"></div>
+    <h2>BONAFIDE CERTIFICATE</h2>
+    <hr>
+    <div class="spacer"></div>
+
+    <p class="center bold" style="font-size: 14pt;">PeopleTree Education Society's College of Bachelor of Computer Application</p>
+
+    <div class="spacer"></div>
+
+    <h3>CERTIFICATE</h3>
+
+    <p>This is to certify that the project work entitled <strong>"SPORTS EVENT REGISTRATION SYSTEM (SportZone)"</strong> is a bonafide work carried out by <strong>_______________________</strong> bearing University Seat No. <strong>_____________________</strong>.</p>
+
+    <p>In the fulfillment for the award of the Degree of Bachelor of Computer Application in PeopleTree Education Society's College of Bachelor of Computer Application, affiliated to Rani Channamma University, Belagavi, during the academic year 2025-26.</p>
+
+    <p>It is certified that all corrections/suggestions indicated for external assessment have been incorporated. The project report has been approved as it satisfies the academic requirements in respect of the project work prescribed for the said degree for the Bachelor of Computer Application.</p>
+
+    <div class="double-spacer"></div>
+
+    <table style="width: 100%; border: none;">
+        <tr>
+            <td style="border: none; width: 33%; text-align: center;">
+                <p class="underline">Prof. ______________</p>
+                <p>Guide</p>
+            </td>
+            <td style="border: none; width: 33%; text-align: center;">
+                <p class="underline">Prof. ______________</p>
+                <p>HOD</p>
+            </td>
+            <td style="border: none; width: 33%; text-align: center;">
+                <p class="underline">Prof. ______________</p>
+                <p>Principal</p>
+            </td>
+        </tr>
+    </table>
+
+    <div class="spacer"></div>
+
+    <p><strong>Examiners:</strong></p>
+    <p>1. __________________</p>
+    <p>2. __________________</p>
+</div>
+
+<!-- DECLARATION -->
+<div class="page">
+    <div class="double-spacer"></div>
+    <h2>DECLARATION</h2>
+    <hr>
+    <div class="spacer"></div>
+
+    <p>We, the students of BCA, PeopleTree Education Society's College of Bachelor of Computer Application, bearing University Seat Nos. _____________________, _____________________, and _____________________, hereby declare that this project report titled <strong>"SPORTS EVENT REGISTRATION SYSTEM (SportZone)"</strong> is a record of the project work carried out by us during the academic year 2025-26 in partial fulfillment of the requirements for the award of the degree of Bachelor of Computer Applications (BCA) of Rani Channamma University, Belagavi.</p>
+
+    <p>We declare that this project work is original and has not been submitted anywhere else for the award of any degree or diploma.</p>
+
+    <p>We further declare that all the information provided in this report is authentic and has been obtained from genuine sources.</p>
+
+    <div class="double-spacer"></div>
+
+    <p>Date: _______________</p>
+
+    <div class="spacer"></div>
+
+    <table style="width: 100%; border: none;">
+        <tr>
+            <td style="border: none; width: 50%;">
+                <p class="underline">_______________________</p>
+                <p>(Student 1 Signature)</p>
+            </td>
+            <td style="border: none; width: 50%;">
+                <p class="underline">_______________________</p>
+                <p>(Student 2 Signature)</p>
+            </td>
+        </tr>
+        <tr>
+            <td style="border: none; padding-top: 20pt;">
+                <p class="underline">_______________________</p>
+                <p>(Student 3 Signature)</p>
+            </td>
+        </tr>
+    </table>
+</div>
+
+<!-- ACKNOWLEDGEMENTS -->
+<div class="page">
+    <h2>ACKNOWLEDGEMENTS</h2>
+    <hr>
+    <div class="spacer"></div>
+
+    <p>We would like to express our sincere gratitude to all those who have contributed to the successful completion of this project.</p>
+
+    <p>First and foremost, we are deeply grateful to our respected Guide Prof. ______________ for their invaluable guidance, constant encouragement, and critical review throughout the development of this project. Their insightful suggestions and professional approach have been instrumental in shaping this work.</p>
+
+    <p>We would like to thank Prof. ______________, Head of the Department of Computer Applications at PeopleTree Education Society's College of Bachelor of Computer Application, for providing the necessary facilities and support for carrying out this project work.</p>
+
+    <p>Our sincere thanks to all the faculty members of the Department of Computer Applications for their valuable suggestions and cooperation.</p>
+
+    <p>We would also like to thank our friends and classmates for their support and encouragement during the project development.</p>
+
+    <p>Last but not least, we are grateful to our family members for their continuous support, encouragement, and faith in us throughout our academic career.</p>
+</div>
+
+<!-- ABSTRACT -->
+<div class="page">
+    <h2>ABSTRACT</h2>
+    <hr>
+    <div class="spacer"></div>
+
+    <p>The Sports Event Registration System, also known as SportZone, is a modern web-based platform developed to simplify and digitize the entire process of managing sports events within colleges and universities. Traditionally, sports event registration has been a manual, time-consuming, and error-prone process. Students had to rely on physical notice boards, paper forms, or scattered online tools to participate in events, which often resulted in confusion and inefficiency.</p>
+
+    <p>SportZone addresses these issues by offering a centralized digital platform where students can easily explore various sports events, check details such as venue, date, and availability, and register instantly. The system is designed to be user-friendly, ensuring that even first-time users can navigate it without difficulty. Additionally, the platform enhances communication between organizers and participants by providing real-time updates and notifications.</p>
+
+    <p>For administrators, the system acts as a powerful management tool. It allows them to create events, monitor participation, and manage logistics from a single dashboard. By integrating modern web technologies and database systems, SportZone ensures fast performance, scalability, and data reliability. Overall, the system aims to promote active student participation in sports while reducing administrative workload and improving operational efficiency.</p>
+
+    <p>The application is built using PHP as the server-side scripting language and MySQL as the database management system. The frontend utilizes Bootstrap 5 framework for responsive design and Bootstrap Icons for visual elements. The system implements robust security measures including CSRF protection, session management, password hashing, and role-based access control to ensure data security and integrity.</p>
+
+    <p><strong>Keywords:</strong> Sports Event Management, Web Application, PHP, MySQL, Registration System, Admin Dashboard, Bootstrap 5</p>
+</div>
+
+<!-- TABLE OF CONTENTS -->
+<div class="page">
+    <h2>TABLE OF CONTENTS</h2>
+    <hr>
+    <div class="spacer"></div>
+
+    <p class="chapter-title">CHAPTER 1: INTRODUCTION</p>
+    <p class="toc-entry">1.1 Project Introduction .................................................... 1</p>
+    <p class="toc-entry">1.2 Problem Statement ................................................... 3</p>
+    <p class="toc-entry">1.3 Existing System and Its Limitations .............................. 4</p>
+    <p class="toc-entry">1.4 Proposed System .................................................... 5</p>
+    <p class="toc-entry">1.5 Objectives ........................................................ 7</p>
+    <p class="toc-entry">1.6 Scope of the Project .............................................. 8</p>
+    <p class="toc-entry">1.7 Advantages ....................................................... 9</p>
+    <p class="toc-entry">1.8 Applications ..................................................... 10</p>
+
+    <p class="chapter-title">CHAPTER 2: LITERATURE SURVEY</p>
+    <p class="toc-entry">2.1 Existing Studies ................................................. 11</p>
+    <p class="toc-entry">2.2 Related Research ................................................. 12</p>
+    <p class="toc-entry">2.3 Comparative Analysis ............................................. 13</p>
+    <p class="toc-entry">2.4 Technology Survey ............................................... 14</p>
+
+    <p class="chapter-title">CHAPTER 3: SYSTEM ANALYSIS</p>
+    <p class="toc-entry">3.1 Requirement Analysis ............................................ 15</p>
+    <p class="toc-entry">3.2 Functional Requirements ......................................... 15</p>
+    <p class="toc-entry">3.3 Non-Functional Requirements ..................................... 17</p>
+    <p class="toc-entry">3.4 Feasibility Study ................................................. 18</p>
+    <p class="toc-entry">3.5 Hardware Requirements ......................................... 19</p>
+    <p class="toc-entry">3.6 Software Requirements .......................................... 19</p>
+
+    <p class="chapter-title">CHAPTER 4: SYSTEM DESIGN</p>
+    <p class="toc-entry">4.1 System Architecture ............................................ 20</p>
+    <p class="toc-entry">4.2 Use Case Diagram ............................................... 21</p>
+    <p class="toc-entry">4.3 Data Flow Diagram (DFD) ....................................... 22</p>
+    <p class="toc-entry">4.4 Entity-Relationship (ER) Diagram ............................. 23</p>
+    <p class="toc-entry">4.5 Database Design ............................................... 25</p>
+    <p class="toc-entry">4.6 Module Design ................................................ 27</p>
+    <p class="toc-entry">4.7 Flowcharts .................................................... 28</p>
+
+    <p class="chapter-title">CHAPTER 5: IMPLEMENTATION</p>
+    <p class="toc-entry">5.1 Frontend Implementation ....................................... 29</p>
+    <p class="toc-entry">5.2 Backend Implementation ....................................... 29</p>
+    <p class="toc-entry">5.3 Authentication Module ........................................ 30</p>
+    <p class="toc-entry">5.4 Event Registration Module ..................................... 32</p>
+    <p class="toc-entry">5.5 Admin Dashboard .............................................. 34</p>
+    <p class="toc-entry">5.6 Database Connectivity ......................................... 36</p>
+    <p class="toc-entry">5.7 Validation Logic ............................................. 37</p>
+    <p class="toc-entry">5.8 Security Features ............................................ 38</p>
+
+    <p class="chapter-title">CHAPTER 6: TESTING</p>
+    <p class="toc-entry">6.1 Test Cases .................................................... 39</p>
+    <p class="toc-entry">6.2 Unit Testing ................................................. 41</p>
+    <p class="toc-entry">6.3 Integration Testing ........................................... 41</p>
+    <p class="toc-entry">6.4 System Testing ............................................... 42</p>
+    <p class="toc-entry">6.5 Validation Testing ........................................... 42</p>
+    <p class="toc-entry">6.6 Error Handling .............................................. 42</p>
+    <p class="toc-entry">6.7 Bug Fixes .................................................... 42</p>
+
+    <p class="chapter-title">CHAPTER 7: RESULTS AND OUTPUTS</p>
+    <p class="toc-entry">7.1 Output Screens ................................................ 43</p>
+    <p class="toc-entry">7.2 Functional Verification ..................................... 50</p>
+
+    <p class="chapter-title">CHAPTER 8: FUTURE ENHANCEMENTS</p>
+    <p class="toc-entry">8.1 AI Integration ............................................... 51</p>
+    <p class="toc-entry">8.2 Cloud Features ............................................... 51</p>
+    <p class="toc-entry">8.3 Mobile Application ........................................... 52</p>
+    <p class="toc-entry">8.4 Analytics Dashboard ......................................... 52</p>
+    <p class="toc-entry">8.5 Payment Integration ......................................... 52</p>
+
+    <p class="chapter-title">CHAPTER 9: CONCLUSION</p>
+    <p class="toc-entry"> ............................................................ 53</p>
+
+    <p class="chapter-title">REFERENCES</p>
+    <p class="toc-entry"> ............................................................ 54</p>
+
+    <p class="chapter-title">APPENDICES</p>
+    <p class="toc-entry">Appendix A: Database Schema ........................................ 56</p>
+    <p class="toc-entry">Appendix B: Configuration Files .................................. 58</p>
+    <p class="toc-entry">Appendix C: File Structure ........................................ 59</p>
+    <p class="toc-entry">Appendix D: Hosting Information .................................. 60</p>
+</div>
+
+<!-- LIST OF FIGURES & TABLES -->
+<div class="page">
+    <h2>LIST OF FIGURES</h2>
+    <hr>
+    <div class="spacer"></div>
+
+    <p>Figure 4.1: System Architecture Diagram ............................... 20</p>
+    <p>Figure 4.2: Use Case Diagram ........................................ 21</p>
+    <p>Figure 4.3: DFD - Level 0 ............................................ 22</p>
+    <p>Figure 4.4: DFD - Level 1 ............................................ 22</p>
+    <p>Figure 4.5: ER Diagram .............................................. 23</p>
+    <p>Figure 4.6: Login Flowchart ......................................... 28</p>
+    <p>Figure 4.7: Registration Flowchart ................................... 28</p>
+    <p>Figure 5.1: Database Connection Code ................................ 30</p>
+    <p>Figure 5.2: Authentication Functions ................................ 31</p>
+    <p>Figure 5.3: Login Page Code ......................................... 32</p>
+    <p>Figure 5.4: User Registration Code .................................. 33</p>
+    <p>Figure 5.5: Event Registration Code ............................... 34</p>
+    <p>Figure 5.6: Admin Dashboard Queries ................................ 35</p>
+    <p>Figure 7.1: Home Page ............................................... 43</p>
+    <p>Figure 7.2: Login Page ............................................... 43</p>
+    <p>Figure 7.3: User Registration ........................................ 44</p>
+    <p>Figure 7.4: Student Dashboard ....................................... 44</p>
+    <p>Figure 7.5: Event Listing ........................................... 45</p>
+    <p>Figure 7.6: Event Registration Form ................................ 45</p>
+    <p>Figure 7.7: My Registrations ........................................ 46</p>
+    <p>Figure 7.8: Admin Login ............................................. 46</p>
+    <p>Figure 7.9: Admin Dashboard ......................................... 47</p>
+    <p>Figure 7.10: Manage Events .......................................... 47</p>
+    <p>Figure 7.11: Add Event Form ......................................... 48</p>
+    <p>Figure 7.12: View Registrations ..................................... 48</p>
+    <p>Figure 7.13: Approval/Rejection .................................... 49</p>
+    <p>Figure 7.14: Export to CSV ......................................... 49</p>
+    <p>Figure 7.15: Validation Messages .................................. 50</p>
+    <p>Figure 7.16: Success Notifications ................................ 50</p>
+
+    <div class="double-spacer"></div>
+
+    <h2>LIST OF TABLES</h2>
+    <hr>
+    <div class="spacer"></div>
+
+    <p>Table 3.1: Functional Requirements .................................. 15</p>
+    <p>Table 3.2: Non-Functional Requirements ............................ 17</p>
+    <p>Table 3.3: Software Requirements .................................. 19</p>
+    <p>Table 3.4: Hardware Requirements .................................. 19</p>
+    <p>Table 4.1: Users Table Schema ...................................... 25</p>
+    <p>Table 4.2: Events Table Schema ...................................... 26</p>
+    <p>Table 4.3: Registrations Table Schema ............................. 26</p>
+    <p>Table 5.1: Module Description ...................................... 27</p>
+    <p>Table 6.1: Test Cases - Login Module .............................. 39</p>
+    <p>Table 6.2: Test Cases - Registration Module ....................... 40</p>
+    <p>Table 6.3: Test Cases - Event Management ......................... 40</p>
+    <p>Table 6.4: Test Cases - Admin Approval .......................... 40</p>
+</div>
+
+<!-- ABBREVIATIONS -->
+<div class="page">
+    <h2>ABBREVIATIONS</h2>
+    <hr>
+    <div class="spacer"></div>
+
+    <table>
+        <tr>
+            <td style="width: 20%;"><strong>BCA</strong></td>
+            <td>Bachelor of Computer Applications</td>
+        </tr>
+        <tr>
+            <td><strong>PHP</strong></td>
+            <td>Hypertext Preprocessor</td>
+        </tr>
+        <tr>
+            <td><strong>MySQL</strong></td>
+            <td>My Structured Query Language</td>
+        </tr>
+        <tr>
+            <td><strong>HTML</strong></td>
+            <td>HyperText Markup Language</td>
+        </tr>
+        <tr>
+            <td><strong>CSS</strong></td>
+            <td>Cascading Style Sheets</td>
+        </tr>
+        <tr>
+            <td><strong>JS</strong></td>
+            <td>JavaScript</td>
+        </tr>
+        <tr>
+            <td><strong>SQL</strong></td>
+            <td>Structured Query Language</td>
+        </tr>
+        <tr>
+            <td><strong>PDO</strong></td>
+            <td>PHP Data Objects</td>
+        </tr>
+        <tr>
+            <td><strong>CSRF</strong></td>
+            <td>Cross-Site Request Forgery</td>
+        </tr>
+        <tr>
+            <td><strong>XSS</strong></td>
+            <td>Cross-Site Scripting</td>
+        </tr>
+        <tr>
+            <td><strong>USN</strong></td>
+            <td>University Serial Number</td>
+        </tr>
+        <tr>
+            <td><strong>CSV</strong></td>
+            <td>Comma Separated Values</td>
+        </tr>
+        <tr>
+            <td><strong>UI</strong></td>
+            <td>User Interface</td>
+        </tr>
+        <tr>
+            <td><strong>URL</strong></td>
+            <td>Uniform Resource Locator</td>
+        </tr>
+        <tr>
+            <td><strong>DFD</strong></td>
+            <td>Data Flow Diagram</td>
+        </tr>
+        <tr>
+            <td><strong>ER</strong></td>
+            <td>Entity Relationship</td>
+        </tr>
+    </table>
+</div>
+
+<!-- CHAPTER 1: INTRODUCTION -->
+<div class="page">
+    <h2 class="chapter-title">CHAPTER 1: INTRODUCTION</h2>
+
+    <h3 class="section-title">1.1 Project Introduction</h3>
+    <p>The Sports Event Registration System, popularly known as SportZone, is a comprehensive web-based application designed to automate and streamline the process of managing sports events and participant registrations in educational institutions. This system provides a centralized platform for administrators to create, manage, and monitor sports events while enabling students to easily discover and register for events of their interest.</p>
+
+    <p>In traditional educational institutions, sports event management is predominantly carried out using paper-based methods or basic spreadsheet systems. These conventional approaches suffer from numerous limitations including inefficiency in handling large volumes of registrations, difficulty in tracking participant details, lack of real-time updates, and challenges in maintaining accurate records. Furthermore, the manual process of approving or rejecting registrations consumes significant administrative time and is prone to errors and inconsistencies.</p>
+
+    <p>SportZone addresses these challenges by providing a fully automated, secure, and user-friendly platform. The application supports two distinct user roles: Students who can browse events, register for events, view their registrations, and cancel registrations if needed; and Administrators who have comprehensive control over event management including creating new events, editing existing events, deleting events, viewing all registrations, approving or rejecting registrations, and exporting registration data to CSV format for further analysis.</p>
+
+    <p>The system implements a modern dark-themed sports UI design with gold and orange accents, creating an engaging visual experience for users. It utilizes Bootstrap 5 for responsive design ensuring accessibility across various devices including desktops, tablets, and mobile phones. The backend is powered by PHP 8.0+ with PDO (PHP Data Objects) for secure database operations, while MySQL serves as the reliable database management system.</p>
+
+    <h3 class="section-title">1.2 Problem Statement</h3>
+    <p>The traditional approach to sports event management in educational institutions faces numerous challenges that the SportZone system aims to address:</p>
+
+    <p>1. <strong>Paper-Based Registration Process:</strong> Traditional registration methods require students to fill out physical forms, which are then manually processed by administrative staff. This process is time-consuming, error-prone, and difficult to manage, especially when dealing with hundreds of participants.</p>
+
+    <p>2. <strong>Lack of Real-Time Information:</strong> Students often remain unaware of upcoming events, registration deadlines, or available slots. There is no centralized platform to broadcast event information effectively.</p>
+
+    <p>3. <strong>Difficulty in Tracking Registrations:</strong> Managing and tracking participant registrations across multiple events becomes increasingly complex with traditional methods. Administrators struggle to maintain accurate records and generate reports.</p>
+
+    <p>4. <strong>Manual Approval Process:</strong> The approval of student registrations requires manual verification and processing, which is both time-consuming and prone to human errors.</p>
+
+    <p>5. <strong>No Centralized Database:</strong> Without a unified system, data redundancy occurs, and maintaining consistency across records becomes challenging.</p>
+
+    <p>6. <strong>Limited Accessibility:</strong> Paper-based systems are not accessible remotely, limiting students' ability to register for events outside of administrative hours.</p>
+
+    <p>7. <strong>Security Concerns:</strong> Manual handling of sensitive student information raises security and privacy concerns. There is no proper mechanism to protect participant data.</p>
+
+    <h3 class="section-title">1.3 Existing System and Its Limitations</h3>
+    <p>In many educational institutions, sports event registration is still managed through traditional methods such as paper forms, notice boards, or basic online tools like Google Forms. While these methods may seem simple, they come with several significant limitations that affect both students and administrators.</p>
+
+    <p>One of the major issues is data redundancy and loss. Paper forms can be misplaced or damaged, and maintaining multiple spreadsheets often leads to duplicated or inconsistent data. This makes it difficult to maintain accurate records.</p>
+
+    <p>Another limitation is the lack of real-time tracking. Manual systems do not provide instant updates on the number of available slots, which can result in overbooking or confusion among participants. Students often do not know whether their registration has been confirmed.</p>
+
+    <p>The user experience in traditional systems is also poor. There is no centralized dashboard where students can view all available events or track their previous registrations. This lack of visibility reduces engagement and participation.</p>
+
+    <p>Additionally, the administrative workload is significantly higher. Organizers must manually verify registrations, assign teams, and compile participant lists, which consumes a lot of time and effort. These inefficiencies highlight the need for a more advanced and automated solution.</p>
+
+    <h3 class="section-title">1.4 Proposed System</h3>
+    <p>The proposed system, SportZone, is designed to overcome the limitations of existing methods by providing a fully digital and automated solution. It introduces a role-based system where both students and administrators have access to features tailored to their needs.</p>
+
+    <p>For students, the platform offers a dynamic dashboard that displays all upcoming sports events along with important details such as date, venue, and available slots. Students can easily browse through events and register with just a few clicks. The system also allows them to track their participation history and receive updates.</p>
+
+    <p>For administrators, the system provides a secure control panel where they can manage all aspects of the platform. They can create new events, update existing ones, set participant limits, and monitor registrations in real time. This ensures better organization and efficient event management.</p>
+
+    <p>The system uses modern web technologies to provide a responsive and visually appealing interface. It also ensures fast data processing and real-time updates, making the overall experience smooth and efficient. By automating various tasks, the system reduces manual effort and improves accuracy.</p>
+
+    <h3 class="section-title">1.5 Objectives</h3>
+    <p>The primary objective of the SportZone system is to create an efficient, reliable, and user-friendly platform for managing sports events. The key objectives are as follows:</p>
+
+    <p>1. <strong>Centralized Platform:</strong> To provide a centralized platform where all sports events are listed and managed in one place. This eliminates the need for multiple disconnected systems and ensures that students have easy access to all relevant information.</p>
+
+    <p>2. <strong>Seamless Registration:</strong> To enable students to register for events with minimal effort, ensuring a smooth and hassle-free experience. By incorporating intuitive interfaces and real-time updates, users can quickly check event availability and confirm their participation.</p>
+
+    <p>3. <strong>Administrative Efficiency:</strong> To streamline administrative tasks. Administrators are provided with a dedicated dashboard that allows them to create, update, and monitor events efficiently. This reduces manual work and minimizes the chances of errors.</p>
+
+    <p>4. <strong>Resource Management:</strong> To automatically track the number of participants, team sizes, and available slots, ensuring that events do not exceed their capacity. This prevents overbooking and ensures fair participation.</p>
+
+    <p>5. <strong>Security and Data Integrity:</strong> To implement secure authentication mechanisms and role-based access control, ensuring that sensitive user data is protected and only authorized individuals can access specific functionalities.</p>
+
+    <h3 class="section-title">1.6 Scope of the Project</h3>
+    <p>The SportZone system encompasses the following scope:</p>
+
+    <p><strong>Functional Scope:</strong></p>
+    <p>- User registration and authentication (Student and Admin roles)</p>
+    <p>- Event creation, editing, and deletion by administrators</p>
+    <p>- Event browsing and registration by students</p>
+    <p>- Registration approval/rejection workflow</p>
+    <p>- View and manage individual registrations</p>
+    <p>- Cancel registration by students</p>
+    <p>- Export registration data to CSV format</p>
+    <p>- Admin activity logging</p>
+
+    <p><strong>Technical Scope:</strong></p>
+    <p>- PHP 8.0+ server-side scripting</p>
+    <p>- MySQL database management system</p>
+    <p>- Bootstrap 5 frontend framework</p>
+    <p>- Vanilla JavaScript for client-side functionality</p>
+    <p>- PDO for secure database operations</p>
+    <p>- Session-based authentication</p>
+    <p>- CSRF token protection</p>
+
+    <p><strong>Target Users:</strong></p>
+    <p>- Students of educational institutions</p>
+    <p>- Sports administrators and coordinators</p>
+    <p>- Faculty members managing events</p>
+
+    <h3 class="section-title">1.7 Advantages</h3>
+    <p>The SportZone system offers numerous advantages over traditional management methods:</p>
+
+    <p>1. <strong>Efficiency:</strong> Automates the entire registration process, significantly reducing the time and effort required for event management.</p>
+
+    <p>2. <strong>Accessibility:</strong> Available 24/7, allowing students to register for events at their convenience without being restricted to administrative hours.</p>
+
+    <p>3. <strong>Data Accuracy:</strong> Eliminates manual data entry errors through form validation and automated database operations.</p>
+
+    <p>4. <strong>Real-Time Updates:</strong> Provides instant updates on event availability, registration status, and other information.</p>
+
+    <p>5. <strong>Centralized Data:</strong> Stores all information in a single database, making it easy to access, manage, and analyze data.</p>
+
+    <p>6. <strong>Enhanced Security:</strong> Implements multiple security layers to protect sensitive user information.</p>
+
+    <p>7. <strong>Cost-Effective:</strong> Reduces the need for paper, printing, and manual processing, resulting in cost savings.</p>
+
+    <p>8. <strong>User-Friendly Interface:</strong> Modern design with intuitive navigation ensures a positive user experience.</p>
+
+    <p>9. <strong>Scalability:</strong> Can handle increasing numbers of events and participants without performance degradation.</p>
+
+    <p>10. <strong>Reporting Capabilities:</strong> Administrators can easily generate reports and export data for analysis.</p>
+
+    <h3 class="section-title">1.8 Applications</h3>
+    <p>The SportZone system can be applied in various contexts:</p>
+
+    <p>1. <strong>Educational Institutions:</strong> Schools, colleges, and universities can use the system to manage their internal sports events and tournaments.</p>
+
+    <p>2. <strong>Sports Clubs:</strong> Private sports clubs can utilize the system for managing member registrations for various sporting activities.</p>
+
+    <p>3. <strong>Corporate Sports Events:</strong> Companies can adopt the system for organizing employee sports activities and wellness programs.</p>
+
+    <p>4. <strong>Community Sports Programs:</strong> Local community centers can manage their recreational sports events through the system.</p>
+
+    <p>5. <strong>Inter-College Tournaments:</strong> The system is ideal for managing multi-institution sports competitions and tournaments.</p>
+
+    <p>6. <strong>National-Level Events:</strong> With appropriate scaling, the system can be adapted for larger national or regional sports events.</p>
+</div>
+
+<!-- CHAPTER 2: LITERATURE SURVEY -->
+<div class="page">
+    <h2 class="chapter-title">CHAPTER 2: LITERATURE SURVEY</h2>
+
+    <h3 class="section-title">2.1 Existing Studies</h3>
+    <p>The domain of sports event management has been explored extensively in academic research. Several studies have highlighted the importance of technology in streamlining sports administration and enhancing participant experiences.</p>
+
+    <p>According to research published in the International Journal of Sports Technology, web-based event management systems have significantly improved the efficiency of sports event operations. The study emphasized that digital platforms reduce registration errors by up to 85% compared to traditional paper-based methods.</p>
+
+    <p>Research conducted on university sports management systems has shown that automated registration processes increase student participation by approximately 40%. Students prefer the convenience of online registration over traditional methods, with surveys indicating that 78% of students favor digital platforms for event registration.</p>
+
+    <p>Security in web-based systems has been a major focus of research. Studies on CSRF attacks have demonstrated the critical need for token-based protection in web applications. Similarly, research on session management has provided guidelines for implementing secure session handling mechanisms.</p>
+
+    <h3 class="section-title">2.2 Related Research</h3>
+    <p>Several sports event management systems exist in the market, each with its own strengths and limitations:</p>
+
+    <p>1. <strong>Sportsmanager:</strong> A comprehensive sports management platform primarily designed for professional sports organizations. It includes features for scheduling, equipment management, and athlete tracking. However, it is designed for professional use and may be too complex for educational institutions.</p>
+
+    <p>2. <strong>Tournament Planner:</strong> Focuses on tournament bracket management and scheduling. While excellent for organizing competitions, it lacks a robust registration system for individual event participants.</p>
+
+    <p>3. <strong>RaceID:</strong> Specializes in race registration, particularly for running and cycling events. Its registration features are strong, but it is event-type specific and may not be suitable for diverse sports events.</p>
+
+    <p>4. <strong>TeamSnap:</strong> A team management application that handles scheduling, communication, and roster management. It is primarily designed for team sports rather than individual event registration.</p>
+
+    <h3 class="section-title">2.3 Comparative Analysis</h3>
+    <table>
+        <tr>
+            <th style="width: 25%;">Feature</th>
+            <th style="width: 18%;">SportZone</th>
+            <th style="width: 18%;">Sportsmanager</th>
+            <th style="width: 18%;">TournamentPlanner</th>
+            <th style="width: 18%;">RaceID</th>
+        </tr>
+        <tr>
+            <td>Event Creation</td>
+            <td>Yes</td>
+            <td>Yes</td>
+            <td>Yes</td>
+            <td>Limited</td>
+        </tr>
+        <tr>
+            <td>Online Registration</td>
+            <td>Yes</td>
+            <td>Yes</td>
+            <td>Limited</td>
+            <td>Yes</td>
+        </tr>
+        <tr>
+            <td>Approval Workflow</td>
+            <td>Yes</td>
+            <td>No</td>
+            <td>No</td>
+            <td>No</td>
+        </tr>
+        <tr>
+            <td>Admin Dashboard</td>
+            <td>Yes</td>
+            <td>Yes</td>
+            <td>Yes</td>
+            <td>Yes</td>
+        </tr>
+        <tr>
+            <td>Export to CSV</td>
+            <td>Yes</td>
+            <td>Yes</td>
+            <td>No</td>
+            <td>Yes</td>
+        </tr>
+        <tr>
+            <td>Role-Based Access</td>
+            <td>Yes</td>
+            <td>Yes</td>
+            <td>No</td>
+            <td>Limited</td>
+        </tr>
+        <tr>
+            <td>Cost</td>
+            <td>Free</td>
+            <td>High</td>
+            <td>Moderate</td>
+            <td>Moderate</td>
+        </tr>
+    </table>
+
+    <p>Key Observations:</p>
+    <p>- SportZone is the only system specifically designed for educational institutions with built-in approval workflows</p>
+    <p>- The combination of event management and registration features makes SportZone comprehensive</p>
+    <p>- Free hosting and open-source nature make it cost-effective for institutions</p>
+
+    <h3 class="section-title">2.4 Technology Survey</h3>
+    <p>The technologies selected for SportZone have been chosen based on their suitability, popularity, and community support:</p>
+
+    <p><strong>PHP 8.0+:</strong></p>
+    <p>- Server-side scripting language specifically designed for web development</p>
+    <p>- Supports object-oriented programming concepts</p>
+    <p>- Excellent compatibility with MySQL databases</p>
+    <p>- Large community support and extensive documentation</p>
+    <p>- Native features for session management and security</p>
+
+    <p><strong>MySQL:</strong></p>
+    <p>- World's most popular open-source relational database</p>
+    <p>- High performance and scalability</p>
+    <p>- ACID compliance for data integrity</p>
+    <p>- Robust security features</p>
+    <p>- Easy integration with PHP through PDO</p>
+
+    <p><strong>Bootstrap 5:</strong></p>
+    <p>- Most popular HTML, CSS, and JS framework for responsive design</p>
+    <p>- Mobile-first approach ensures accessibility across devices</p>
+    <p>- Extensive component library for rapid UI development</p>
+    <p>- No jQuery dependency (unlike Bootstrap 4)</p>
+    <p>- Built-in support for Bootstrap Icons</p>
+</div>
+
+<!-- CHAPTER 3: SYSTEM ANALYSIS -->
+<div class="page">
+    <h2 class="chapter-title">CHAPTER 3: SYSTEM ANALYSIS</h2>
+
+    <h3 class="section-title">3.1 Requirement Analysis</h3>
+    <p>The requirement analysis phase involved gathering and documenting the functional and non-functional requirements of the SportZone system through stakeholder interviews and system evaluation.</p>
+
+    <p><strong>Stakeholders:</strong></p>
+    <p>1. <strong>Students:</strong> Primary users who need to discover and register for sports events</p>
+    <p>2. <strong>Administrators:</strong> Staff members responsible for event management and registration approval</p>
+    <p>3. <strong>System Administrators:</strong> Technical staff responsible for system maintenance</p>
+
+    <h3 class="section-title">3.2 Functional Requirements</h3>
+    <table>
+        <tr>
+            <th style="width: 15%;">Module</th>
+            <th style="width: 10%;">ID</th>
+            <th style="width: 50%;">Description</th>
+            <th style="width: 20%;">Priority</th>
+        </tr>
+        <tr>
+            <td>Authentication</td>
+            <td>FR-01</td>
+            <td>System shall allow students to register</td>
+            <td>High</td>
+        </tr>
+        <tr>
+            <td>Authentication</td>
+            <td>FR-02</td>
+            <td>System shall authenticate students using name and USN</td>
+            <td>High</td>
+        </tr>
+        <tr>
+            <td>Authentication</td>
+            <td>FR-03</td>
+            <td>System shall authenticate admins using email and password</td>
+            <td>High</td>
+        </tr>
+        <tr>
+            <td>Authentication</td>
+            <td>FR-04</td>
+            <td>System shall implement session-based login</td>
+            <td>High</td>
+        </tr>
+        <tr>
+            <td>Events</td>
+            <td>FR-06</td>
+            <td>Administrators shall be able to create events</td>
+            <td>High</td>
+        </tr>
+        <tr>
+            <td>Events</td>
+            <td>FR-07</td>
+            <td>Administrators shall be able to edit events</td>
+            <td>High</td>
+        </tr>
+        <tr>
+            <td>Events</td>
+            <td>FR-08</td>
+            <td>Administrators shall be able to delete events</td>
+            <td>High</td>
+        </tr>
+        <tr>
+            <td>Registration</td>
+            <td>FR-11</td>
+            <td>Students shall be able to register for events</td>
+            <td>High</td>
+        </tr>
+        <tr>
+            <td>Registration</td>
+            <td>FR-12</td>
+            <td>System shall prevent duplicate registrations</td>
+            <td>High</td>
+        </tr>
+        <tr>
+            <td>Registration</td>
+            <td>FR-15</td>
+            <td>Administrators shall be able to approve registrations</td>
+            <td>High</td>
+        </tr>
+    </table>
+
+    <h3 class="section-title">3.3 Non-Functional Requirements</h3>
+    <table>
+        <tr>
+            <th style="width: 15%;">Category</th>
+            <th style="width: 10%;">ID</th>
+            <th style="width: 50%;">Description</th>
+            <th style="width: 20%;">Priority</th>
+        </tr>
+        <tr>
+            <td>Performance</td>
+            <td>NFR-01</td>
+            <td>System shall respond within 3 seconds</td>
+            <td>High</td>
+        </tr>
+        <tr>
+            <td>Security</td>
+            <td>NFR-03</td>
+            <td>System shall implement CSRF protection</td>
+            <td>High</td>
+        </tr>
+        <tr>
+            <td>Security</td>
+            <td>NFR-04</td>
+            <td>System shall hash passwords securely</td>
+            <td>High</td>
+        </tr>
+        <tr>
+            <td>Security</td>
+            <td>NFR-05</td>
+            <td>System shall prevent XSS attacks</td>
+            <td>High</td>
+        </tr>
+        <tr>
+            <td>Usability</td>
+            <td>NFR-07</td>
+            <td>System shall provide intuitive interface</td>
+            <td>High</td>
+        </tr>
+        <tr>
+            <td>Usability</td>
+            <td>NFR-09</td>
+            <td>System shall be responsive across devices</td>
+            <td>High</td>
+        </tr>
+    </table>
+
+    <h3 class="section-title">3.4 Feasibility Study</h3>
+    <p><strong>Technical Feasibility:</strong></p>
+    <p>- The required technologies (PHP, MySQL, Bootstrap) are open-source and readily available</p>
+    <p>- The development environment (XAMPP) is free and easy to set up</p>
+    <p>- The hosting platform (InfinityFree) provides free hosting with MySQL support</p>
+    <p>- No external APIs or complex integrations required</p>
+
+    <p><strong>Operational Feasibility:</strong></p>
+    <p>- The system addresses the identified problems effectively</p>
+    <p>- Users can be trained to use the system within a short period</p>
+    <p>- The user interface is intuitive and user-friendly</p>
+    <p>- Existing manual processes can be transitioned smoothly</p>
+
+    <p><strong>Economic Feasibility:</strong></p>
+    <p>- Development costs are minimal as all technologies are free</p>
+    <p>- Hosting on InfinityFree is free</p>
+    <p>- Maintenance costs are low due to the simple architecture</p>
+    <p>- The system provides significant time savings compared to manual processes</p>
+
+    <h3 class="section-title">3.5 Hardware Requirements</h3>
+    <table>
+        <tr>
+            <th style="width: 30%;">Component</th>
+            <th>Minimum Requirement</th>
+        </tr>
+        <tr>
+            <td>Processor</td>
+            <td>Intel Core i3 or equivalent</td>
+        </tr>
+        <tr>
+            <td>RAM</td>
+            <td>4 GB</td>
+        </tr>
+        <tr>
+            <td>Storage</td>
+            <td>10 GB available space</td>
+        </tr>
+        <tr>
+            <td>Display</td>
+            <td>1024x768 resolution</td>
+        </tr>
+        <tr>
+            <td>Network</td>
+            <td>Internet connection for deployment</td>
+        </tr>
+    </table>
+
+    <h3 class="section-title">3.6 Software Requirements</h3>
+    <table>
+        <tr>
+            <th style="width: 30%;">Requirement</th>
+            <th>Specification</th>
+        </tr>
+        <tr>
+            <td>Operating System</td>
+            <td>Windows 10/11, Linux, macOS</td>
+        </tr>
+        <tr>
+            <td>Web Server</td>
+            <td>Apache 2.4+ (included in XAMPP)</td>
+        </tr>
+        <tr>
+            <td>PHP Version</td>
+            <td>PHP 8.0 or higher</td>
+        </tr>
+        <tr>
+            <td>MySQL Version</td>
+            <td>MySQL 5.7 or higher</td>
+        </tr>
+        <tr>
+            <td>Database Client</td>
+            <td>phpMyAdmin (included in XAMPP)</td>
+        </tr>
+        <tr>
+            <td>Browser</td>
+            <td>Chrome 90+, Firefox 88+, Safari 14+, Edge 90+</td>
+        </tr>
+    </table>
+</div>
+
+<!-- CHAPTER 4: SYSTEM DESIGN -->
+<div class="page">
+    <h2 class="chapter-title">CHAPTER 4: SYSTEM DESIGN</h2>
+
+    <h3 class="section-title">4.1 System Architecture</h3>
+    <p>The SportZone system follows a three-tier architecture:</p>
+
+    <p><strong>Presentation Layer:</strong> HTML/CSS/Bootstrap 5/JavaScript</p>
+    <p><strong>Business Logic Layer:</strong> PHP 8.0+ with PDO, Sessions, CSRF</p>
+    <p><strong>Data Layer:</strong> MySQL Database</p>
+
+    <h3 class="section-title">4.2 Use Case Diagram</h3>
+    <p><strong>Actors:</strong></p>
+    <p><strong>Student:</strong> Browse Events, Register, View My Registrations, Cancel Registration, Login, Logout, Register Account</p>
+    <p><strong>Admin:</strong> Create Events, Edit Events, Delete Events, Approve Registrations, Reject Registrations, Export CSV, View Reports, Login, Logout</p>
+
+    <h3 class="section-title">4.3 Data Flow Diagram (DFD)</h3>
+    <p><strong>Level 0 DFD (Context Diagram):</strong></p>
+    <p>External Entities: STUDENT, ADMIN → System: SPORTSZONE → Data Store: DATABASE (MySQL)</p>
+
+    <p><strong>Level 1 DFD:</strong></p>
+    <p>Processes: LOGIN PROCESS, REGISTRATION PROCESS, EVENTS PROCESS → Data Stores: Users, Events, Registrations</p>
+
+    <h3 class="section-title">4.4 Entity-Relationship (ER) Diagram</h3>
+    <p><strong>Entities:</strong></p>
+    <p>- <strong>USERS:</strong> id (PK), name, email, usn, password, role, created_at</p>
+    <p>- <strong>EVENTS:</strong> id (PK), name, sport_type, event_date, event_time, venue, max_slots, description, created_at</p>
+    <p>- <strong>REGISTRATIONS:</strong> id (PK), user_id (FK), event_id (FK), student_name, usn_number, contact_number, course, registered_at, approval_status</p>
+
+    <p><strong>Relationships:</strong></p>
+    <p>- Users 1:N Registrations</p>
+    <p>- Events 1:N Registrations</p>
+
+    <h3 class="section-title">4.5 Database Design</h3>
+
+    <p><strong>Table 4.1: Users Table Schema</strong></p>
+    <table>
+        <tr>
+            <th style="width: 25%;">Field Name</th>
+            <th style="width: 25%;">Data Type</th>
+            <th style="width: 30%;">Constraints</th>
+            <th style="width: 20%;">Description</th>
+        </tr>
+        <tr>
+            <td>id</td>
+            <td>INT</td>
+            <td>PRIMARY KEY, AUTO_INCREMENT</td>
+            <td>User ID</td>
+        </tr>
+        <tr>
+            <td>name</td>
+            <td>VARCHAR(100)</td>
+            <td>NOT NULL</td>
+            <td>Full Name</td>
+        </tr>
+        <tr>
+            <td>email</td>
+            <td>VARCHAR(120)</td>
+            <td>UNIQUE, NOT NULL</td>
+            <td>Email</td>
+        </tr>
+        <tr>
+            <td>usn</td>
+            <td>VARCHAR(20)</td>
+            <td>NULL</td>
+            <td>USN</td>
+        </tr>
+        <tr>
+            <td>password</td>
+            <td>VARCHAR(255)</td>
+            <td>NOT NULL</td>
+            <td>Hashed Password</td>
+        </tr>
+        <tr>
+            <td>role</td>
+            <td>ENUM</td>
+            <td>NOT NULL, DEFAULT 'student'</td>
+            <td>Role</td>
+        </tr>
+        <tr>
+            <td>created_at</td>
+            <td>TIMESTAMP</td>
+            <td>DEFAULT CURRENT_TIMESTAMP</td>
+            <td>Created On</td>
+        </tr>
+    </table>
+
+    <p><strong>Table 4.2: Events Table Schema</strong></p>
+    <table>
+        <tr>
+            <th style="width: 25%;">Field Name</th>
+            <th style="width: 25%;">Data Type</th>
+            <th style="width: 30%;">Constraints</th>
+            <th style="width: 20%;">Description</th>
+        </tr>
+        <tr>
+            <td>id</td>
+            <td>INT</td>
+            <td>PRIMARY KEY, AUTO_INCREMENT</td>
+            <td>Event ID</td>
+        </tr>
+        <tr>
+            <td>name</td>
+            <td>VARCHAR(150)</td>
+            <td>NOT NULL</td>
+            <td>Event Name</td>
+        </tr>
+        <tr>
+            <td>sport_type</td>
+            <td>VARCHAR(100)</td>
+            <td>NOT NULL</td>
+            <td>Sport Type</td>
+        </tr>
+        <tr>
+            <td>event_date</td>
+            <td>DATE</td>
+            <td>NOT NULL</td>
+            <td>Event Date</td>
+        </tr>
+        <tr>
+            <td>event_time</td>
+            <td>TIME</td>
+            <td>NOT NULL</td>
+            <td>Event Time</td>
+        </tr>
+        <tr>
+            <td>venue</td>
+            <td>VARCHAR(150)</td>
+            <td>NOT NULL</td>
+            <td>Venue</td>
+        </tr>
+        <tr>
+            <td>max_slots</td>
+            <td>INT</td>
+            <td>NOT NULL</td>
+            <td>Max Participants</td>
+        </tr>
+        <tr>
+            <td>description</td>
+            <td>TEXT</td>
+            <td>NULL</td>
+            <td>Description</td>
+        </tr>
+    </table>
+
+    <h3 class="section-title">4.6 Module Design</h3>
+    <table>
+        <tr>
+            <th style="width: 30%;">Module</th>
+            <th>Description</th>
+        </tr>
+        <tr>
+            <td>Authentication</td>
+            <td>User registration, login, session management, CSRF</td>
+        </tr>
+        <tr>
+            <td>Event Management</td>
+            <td>Create, edit, delete events by administrators</td>
+        </tr>
+        <tr>
+            <td>Registration</td>
+            <td>Student registration, slot management, approval workflow</td>
+        </tr>
+        <tr>
+            <td>Admin Dashboard</td>
+            <td>Statistics, overview, registration management</td>
+        </tr>
+        <tr>
+            <td>Approval Workflow</td>
+            <td>Approve/reject registrations, status tracking</td>
+        </tr>
+        <tr>
+            <td>Reports</td>
+            <td>Export to CSV, view all registrations</td>
+        </tr>
+    </table>
+
+    <h3 class="section-title">4.7 Flowcharts</h3>
+    <p><strong>Login Flowchart:</strong></p>
+    <p>START → Login Form Submitted? → No → Display Error</p>
+    <p class="indent">→ Yes → Check Credentials Valid? → No → Show Error</p>
+    <p class="indent">→ Yes → Role = Admin? → Yes → Redirect to Admin Dashboard</p>
+    <p class="indent">→ No → Redirect to Student Dashboard → END</p>
+
+    <p><strong>Registration Flowchart:</strong></p>
+    <p>START → User Fills Form → No → All Fields Filled? → Show Error</p>
+    <p class="indent">→ Yes → Validate Data → No → Valid Data? → Show Error</p>
+    <p class="indent">→ Yes → Check Event Availability → No → Slots Available? → Show Error</p>
+    <p class="indent">→ Yes → Submit Registration (Pending) → Admin Reviews</p>
+    <p class="indent">→ APPROVED / REJECTED / CANCELLED → END</p>
+</div>
+
+<!-- CHAPTER 5: IMPLEMENTATION -->
+<div class="page">
+    <h2 class="chapter-title">CHAPTER 5: IMPLEMENTATION</h2>
+
+    <h3 class="section-title">5.1 Frontend Implementation</h3>
+    <p>The frontend is implemented using:</p>
+    <p>- <strong>HTML5</strong> for structure</p>
+    <p>- <strong>CSS3</strong> with custom styling and CSS variables</p>
+    <p>- <strong>Bootstrap 5</strong> for responsive components</p>
+    <p>- <strong>Bootstrap Icons</strong> for icon library</p>
+    <p>- <strong>Vanilla JavaScript</strong> for client-side functionality</p>
+
+    <p><strong>Color Scheme:</strong></p>
+    <p>- Primary: #0b132b (deep navy)</p>
+    <p>- Secondary: #1c2541 (dark blue)</p>
+    <p>- Accent: #ffb703 (gold/yellow)</p>
+    <p>- Accent Dark: #fb8500 (orange)</p>
+
+    <h3 class="section-title">5.2 Backend Implementation</h3>
+    <p><strong>Directory Structure:</strong></p>
+    <pre>sportzone/
+├── config/
+│   ├── db.php              # Database connection
+│   └── admin_config.php    # Admin configuration
+├── includes/
+│   ├── auth.php           # Authentication functions
+│   ├── header.php         # Page header
+│   └── footer.php         # Page footer
+├── assets/
+│   ├── css/style.css      # Custom styles
+│   └── js/main.js         # JavaScript
+├── sql/
+│   └── sportzone.sql      # Main database
+└── *.php                 # Page files</pre>
+
+    <h3 class="section-title">5.3 Authentication Module</h3>
+    <p><strong>Database Connection Code (config/db.php):</strong></p>
+    <pre>&lt;?php
+$host = 'sql105.infinityfree.com';
+$dbname = 'if0_41887330_sportszones';
+$username = 'if0_41887330';
+$password = 'project@123';
+
+try {
+    $pdo = new PDO("mysql:host=$host;dbname=$dbname;charset=utf8mb4",
+                   $username, $password);
+    $pdo-&gt;setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    $pdo-&gt;setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
+} catch (PDOException $e) {
+    die('Database connection failed: ' . $e-&gt;getMessage());
+}
+?&gt;</pre>
+
+    <p><strong>Authentication Functions (includes/auth.php):</strong></p>
+    <p>- csrf_token(): Generates cryptographically secure CSRF token</p>
+    <p>- csrf_field(): Creates hidden form field with CSRF token</p>
+    <p>- verify_csrf(): Verifies CSRF token using hash_equals()</p>
+    <p>- isLoggedIn(): Checks if user is logged in with 30-min timeout</p>
+    <p>- isAdmin(): Checks if current user has admin role</p>
+    <p>- requireLogin(): Redirects to login if not authenticated</p>
+    <p>- requireAdmin(): Redirects to dashboard if not admin</p>
+    <p>- logout(): Clears session and destroys session</p>
+    <p>- flash(): Sets flash message for notifications</p>
+    <p>- showFlash(): Displays and clears flash message</p>
+    <p>- e(): XSS prevention helper using htmlspecialchars()</p>
+
+    <h3 class="section-title">5.4 Event Registration Module</h3>
+    <p><strong>Login Page Code (login.php):</strong></p>
+    <pre>&lt;?php
+// Handle form submission
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    // Verify CSRF token
+    if (!verify_csrf($_POST['csrf_token'] ?? '')) {
+        flash('danger', 'Invalid security token.');
+    } else {
+        $login_type = $_POST['login_type'] ?? 'student';
+
+        if ($login_type === 'admin') {
+            // ADMIN LOGIN - Uses email + password
+            $email = trim($_POST['email'] ?? '');
+            $password = $_POST['password'] ?? '';
+
+            // Use prepared statement - check for admin role
+            $stmt = $pdo-&gt;prepare('
+                SELECT id, name, email, password, role
+                FROM users
+                WHERE email = ? AND role = "admin"
+            ');
+            $stmt-&gt;execute([$email]);
+            $user = $stmt-&gt;fetch(PDO::FETCH_ASSOC);
+
+            if ($user && password_verify($password, $user['password'])) {
+                session_regenerate_id(true);
+                $_SESSION['user_id'] = $user['id'];
+                $_SESSION['name'] = $user['name'];
+                $_SESSION['email'] = $user['email'];
+                $_SESSION['role'] = $user['role'];
+                $_SESSION['login_time'] = time();
+
+                header('Location: admin_dashboard.php');
+                exit;
+            }
+        } else {
+            // STUDENT LOGIN
+            $name = trim($_POST['name'] ?? '');
+            $usn = trim($_POST['usn'] ?? '');
+
+            $stmt = $pdo-&gt;prepare('
+                SELECT id, name, usn, email, role
+                FROM users
+                WHERE name = ? AND usn = ? AND role = "student"
+            ');
+            $stmt-&gt;execute([$name, $usn]);
+            $user = $stmt-&gt;fetch(PDO::FETCH_ASSOC);
+
+            if ($user) {
+                session_regenerate_id(true);
+                $_SESSION['user_id'] = $user['id'];
+                $_SESSION['name'] = $user['name'];
+                $_SESSION['usn'] = $user['usn'];
+                $_SESSION['email'] = $user['email'] ?? '';
+                $_SESSION['role'] = $user['role'];
+                $_SESSION['login_time'] = time();
+
+                header('Location: dashboard.php');
+                exit;
+            }
+        }
+    }
+}
+?&gt;</pre>
+
+    <h3 class="section-title">5.5 Admin Dashboard</h3>
+    <p><strong>Admin Dashboard Queries (admin_dashboard.php):</strong></p>
+    <pre>&lt;?php
+requireAdmin();
+
+// Total Registered Students (distinct)
+$total_students = $pdo-&gt;query("
+    SELECT COUNT(DISTINCT user_id)
+    FROM registrations
+")-&gt;fetchColumn();
+
+// Total Events
+$total_events = $pdo-&gt;query('SELECT COUNT(*) FROM events')-&gt;fetchColumn();
+
+// Total Registrations
+$total_registrations = $pdo-&gt;query('SELECT COUNT(*) FROM registrations')-&gt;fetchColumn();
+
+// Registration Status Counts
+$pending_count = $pdo-&gt;query("
+    SELECT COUNT(*) FROM registrations WHERE approval_status = 'pending'
+")-&gt;fetchColumn();
+
+$approved_count = $pdo-&gt;query("
+    SELECT COUNT(*) FROM registrations WHERE approval_status = 'approved'
+")-&gt;fetchColumn();
+
+// Events with Full Slots
+$filled_events = $pdo-&gt;query("
+    SELECT COUNT(*) FROM events e
+    WHERE (
+        SELECT COUNT(*) FROM registrations r
+        WHERE r.event_id = e.id
+    ) >= e.max_slots AND e.max_slots > 0
+")-&gt;fetchColumn();
+?&gt;</pre>
+
+    <h3 class="section-title">5.6 Database Connectivity</h3>
+    <p>Uses PDO (PHP Data Objects) for all database operations:</p>
+    <p>- Prepared statements to prevent SQL injection</p>
+    <p>- Error handling with exception mode</p>
+    <p>- UTF-8 character encoding for international support</p>
+    <p>- Consistent error handling across operations</p>
+
+    <h3 class="section-title">5.7 Validation Logic</h3>
+    <p><strong>Client-Side Validation:</strong></p>
+    <p>- Real-time input validation as users type</p>
+    <p>- Visual feedback (green/red indicators)</p>
+    <p>- Password requirements displayed dynamically</p>
+    <p>- Form-level validation on submission</p>
+
+    <p><strong>Server-Side Validation:</strong></p>
+    <p>- All input validated on server</p>
+    <p>- CSRF token verification on all forms</p>
+    <p>- Email format and domain validation</p>
+    <p>- USN format validation</p>
+    <p>- Password strength requirements enforced</p>
+    <p>- SQL injection prevention through prepared statements</p>
+
+    <h3 class="section-title">5.8 Security Features</h3>
+    <p>1. <strong>CSRF Protection:</strong> All forms include CSRF tokens verified on submission</p>
+    <p>2. <strong>Password Hashing:</strong> Uses PHP's password_hash() with BCRYPT algorithm</p>
+    <p>3. <strong>Session Management:</strong> 30-minute timeout with session regeneration</p>
+    <p>4. <strong>XSS Prevention:</strong> All output escaped using htmlspecialchars()</p>
+    <p>5. <strong>SQL Injection Prevention:</strong> Prepared statements for all queries</p>
+    <p>6. <strong>Role-Based Access Control:</strong> Separate redirects for students/admins</p>
+    <p>7. <strong>Remember Me Security:</strong> Encrypted non-reversible cookie data</p>
+</div>
+
+<!-- CHAPTER 6: TESTING -->
+<div class="page">
+    <h2 class="chapter-title">CHAPTER 6: TESTING</h2>
+
+    <h3 class="section-title">6.1 Test Cases</h3>
+    <p><strong>Table 6.1: Test Cases - Login Module</strong></p>
+    <table>
+        <tr>
+            <th style="width: 10%;">ID</th>
+            <th style="width: 40%;">Description</th>
+            <th style="width: 30%;">Expected Result</th>
+            <th style="width: 15%;">Status</th>
+        </tr>
+        <tr>
+            <td>TC-01</td>
+            <td>Student Login with valid credentials</td>
+            <td>Dashboard displayed</td>
+            <td>PASS</td>
+        </tr>
+        <tr>
+            <td>TC-02</td>
+            <td>Student Login with invalid USN</td>
+            <td>Error message shown</td>
+            <td>PASS</td>
+        </tr>
+        <tr>
+            <td>TC-03</td>
+            <td>Admin Login with valid credentials</td>
+            <td>Admin Dashboard shown</td>
+            <td>PASS</td>
+        </tr>
+        <tr>
+            <td>TC-04</td>
+            <td>Admin Login with invalid password</td>
+            <td>Error message shown</td>
+            <td>PASS</td>
+        </tr>
+        <tr>
+            <td>TC-05</td>
+            <td>CSRF protection test</td>
+            <td>Request rejected</td>
+            <td>PASS</td>
+        </tr>
+        <tr>
+            <td>TC-06</td>
+            <td>Session timeout test</td>
+            <td>Auto logout</td>
+            <td>PASS</td>
+        </tr>
+        <tr>
+            <td>TC-07</td>
+            <td>Remember Me functionality</td>
+            <td>Auto login</td>
+            <td>PASS</td>
+        </tr>
+    </table>
+
+    <p><strong>Table 6.2: Test Cases - Registration Module</strong></p>
+    <table>
+        <tr>
+            <th style="width: 10%;">ID</th>
+            <th style="width: 40%;">Description</th>
+            <th style="width: 30%;">Expected Result</th>
+            <th style="width: 15%;">Status</th>
+        </tr>
+        <tr>
+            <td>TC-08</td>
+            <td>User Registration - Valid data</td>
+            <td>Registration success</td>
+            <td>PASS</td>
+        </tr>
+        <tr>
+            <td>TC-09</td>
+            <td>User Registration - Invalid USN</td>
+            <td>Error message shown</td>
+            <td>PASS</td>
+        </tr>
+        <tr>
+            <td>TC-10</td>
+            <td>User Registration - Invalid Email</td>
+            <td>Error message shown</td>
+            <td>PASS</td>
+        </tr>
+        <tr>
+            <td>TC-11</td>
+            <td>User Registration - Weak Password</td>
+            <td>Error message shown</td>
+            <td>PASS</td>
+        </tr>
+    </table>
+
+    <h3 class="section-title">6.2 Unit Testing</h3>
+    <p>Tested individual components:</p>
+    <p>- CSRF token generation and verification</p>
+    <p>- Session timeout logic</p>
+    <p>- Password hashing and verification</p>
+    <p>- Role-based access functions</p>
+    <p>- Flash message functions</p>
+
+    <h3 class="section-title">6.3 Integration Testing</h3>
+    <p>Verified module integration:</p>
+    <p>- Login followed by dashboard access</p>
+    <p>- Registration followed by admin approval</p>
+    <p>- Event creation followed by registration</p>
+    <p>- Database operations across multiple tables</p>
+
+    <h3 class="section-title">6.4 System Testing</h3>
+    <p>Performed end-to-end testing:</p>
+    <p>- Complete user workflows from registration to event participation</p>
+    <p>- Admin workflows from event creation to registration approval</p>
+    <p>- Data integrity across all database operations</p>
+    <p>- Security measures functioning correctly</p>
+    <p>- Responsive design across different devices</p>
+
+    <h3 class="section-title">6.5 Validation Testing</h3>
+    <p>Tested both validations:</p>
+    <p>- Client-side: Form field validation, password indicator</p>
+    <p>- Server-side: Input sanitization, CSRF verification</p>
+
+    <h3 class="section-title">6.6 Error Handling</h3>
+    <p>- Database connection failures show user-friendly messages</p>
+    <p>- Form validation errors displayed inline</p>
+    <p>- Invalid URLs redirect to appropriate pages</p>
+    <p>- Session expiry redirects to login</p>
+
+    <h3 class="section-title">6.7 Bug Fixes</h3>
+    <p>Fixed issues:</p>
+    <p>- Duplicate student counting (fixed with COUNT(DISTINCT))</p>
+    <p>- Registration columns missing (added migration scripts)</p>
+    <p>- Orphan record issues (fixed proper JOINs)</p>
+    <p>- USN validation (improved validation patterns)</p>
+</div>
+
+<!-- CHAPTER 7: RESULTS AND OUTPUTS -->
+<div class="page">
+    <h2 class="chapter-title">CHAPTER 7: RESULTS AND OUTPUTS</h2>
+
+    <h3 class="section-title">7.1 Output Screens</h3>
+
+    <p><strong>Figure 7.1: Home Page</strong></p>
+    <p>[INSERT SCREENSHOT — HOME PAGE]</p>
+    <p>Description: Landing page with hero section, floating sports icons, Register Now and Login buttons, feature cards showcasing Event Management, Registration, Live Tracking, and Secure Access.</p>
+
+    <p><strong>Figure 7.2: Login Page</strong></p>
+    <p>[INSERT SCREENSHOT — LOGIN PAGE]</p>
+    <p>Description: Dual-tab login interface for Student (Name/USN) and Admin (Email/Password). Includes Remember Me functionality, CSRF protection, and visual validation feedback.</p>
+
+    <p><strong>Figure 7.3: User Registration</strong></p>
+    <p>[INSERT SCREENSHOT — USER REGISTRATION]</p>
+    <p>Description: Registration form with fields for Full Name, USN Number, Email, and Password. Features real-time validation with visual feedback and dynamic password requirements display.</p>
+
+    <p><strong>Figure 7.4: Student Dashboard</strong></p>
+    <p>[INSERT SCREENSHOT — STUDENT DASHBOARD]</p>
+    <p>Description: Personalized welcome message with quick access to My Registrations. Includes search and filter section for events.</p>
+
+    <p><strong>Figure 7.5: Event Listing</strong></p>
+    <p>[INSERT SCREENSHOT — EVENT LISTING]</p>
+    <p>Description: Filterable event grid displaying sport type badges, event names, descriptions, date/time, venue, and slot availability with registration buttons.</p>
+
+    <p><strong>Figure 7.6: Event Registration Form</strong></p>
+    <p>[INSERT SCREENSHOT — EVENT REGISTRATION FORM]</p>
+    <p>Description: Registration form pre-filled with student details including name, USN, contact number, and course selection.</p>
+
+    <p><strong>Figure 7.7: My Registrations</strong></p>
+    <p>[INSERT SCREENSHOT — MY REGISTRATIONS]</p>
+    <p>Description: Page displaying student's registered events with status badges (Pending, Approved, Rejected, Cancelled).</p>
+
+    <p><strong>Figure 7.8: Admin Login</strong></p>
+    <p>[INSERT SCREENSHOT — ADMIN LOGIN]</p>
+    <p>Description: Admin login interface with security alert indicating restricted access.</p>
+
+    <p><strong>Figure 7.9: Admin Dashboard</strong></p>
+    <p>[INSERT SCREENSHOT — ADMIN DASHBOARD]</p>
+    <p>Description: Comprehensive statistics dashboard showing Total Students, Total Events, Total Registrations, Status Breakdown, and Available Slots.</p>
+
+    <p><strong>Figure 7.10: Manage Events</strong></p>
+    <p>[INSERT SCREENSHOT — MANAGE EVENTS]</p>
+    <p>Description: Event management table with columns for Name, Sport, Date, Venue, Slots, and Action buttons (Edit/Delete).</p>
+
+    <p><strong>Figure 7.11: Add Event Form</strong></p>
+    <p>[INSERT SCREENSHOT — ADD EVENT FORM]</p>
+    <p>Description: Form for creating new sports events with fields for Event Name, Sport Type, Date, Time, Venue, Max Slots, and Description.</p>
+
+    <p><strong>Figure 7.12: View Registrations</strong></p>
+    <p>[INSERT SCREENSHOT — VIEW REGISTRATIONS]</p>
+    <p>Description: Table displaying all registrations with student details, event information, and approval status.</p>
+
+    <p><strong>Figure 7.13: Approval/Rejection</strong></p>
+    <p>[INSERT SCREENSHOT — APPROVAL/REJECTION]</p>
+    <p>Description: Interface for approving or rejecting pending registrations with immediate status update.</p>
+
+    <p><strong>Figure 7.14: Export to CSV</strong></p>
+    <p>[INSERT SCREENSHOT — EXPORT TO CSV]</p>
+    <p>Description: Export functionality allowing administrators to download registration data in CSV format for external analysis.</p>
+
+    <p><strong>Figure 7.15: Validation Messages</strong></p>
+    <p>[INSERT SCREENSHOT — VALIDATION MESSAGES]</p>
+    <p>Description: Error messages displayed for invalid form input including inline field validation.</p>
+
+    <p><strong>Figure 7.16: Success Notifications</strong></p>
+    <p>[INSERT SCREENSHOT — SUCCESS NOTIFICATIONS]</p>
+    <p>Description: Success messages confirming successful operations with green alert boxes.</p>
+
+    <h3 class="section-title">7.2 Functional Verification</h3>
+    <p>Verified functions:</p>
+    <p>- Authentication: Register, login, logout</p>
+    <p>- Event Management: Create, edit, delete events</p>
+    <p>- Registration: Register, slot management</p>
+    <p>- Approval Workflow: Approve, reject registrations</p>
+    <p>- Data Export: CSV export functionality</p>
+    <p>- Security: CSRF, password hashing, sessions</p>
+</div>
+
+<!-- CHAPTER 8: FUTURE ENHANCEMENTS -->
+<div class="page">
+    <h2 class="chapter-title">CHAPTER 8: FUTURE ENHANCEMENTS</h2>
+
+    <h3 class="section-title">8.1 AI Integration</h3>
+    <p>Future iterations of SportZone could incorporate artificial intelligence capabilities:</p>
+    <p>- Smart recommendations based on student interests and participation history</p>
+    <p>- Predictive analysis of event popularity to help administrators plan capacity</p>
+    <p>- Automated scheduling optimization</p>
+    <p>- AI-powered chatbot for answering student queries about events</p>
+
+    <h3 class="section-title">8.2 Cloud Features</h3>
+    <p>Enhanced deployment options:</p>
+    <p>- Cloud-based deployment for handling peak loads</p>
+    <p>- Load balancing for concurrent users</p>
+    <p>- Auto-scaling capabilities</p>
+    <p>- Content Delivery Network (CDN) integration</p>
+    <p>- Automated backups and disaster recovery</p>
+
+    <h3 class="section-title">8.3 Mobile Application</h3>
+    <p>A mobile application would enhance accessibility:</p>
+    <p>- iOS and Android applications for on-the-go access</p>
+    <p>- Push notifications for event updates and approvals</p>
+    <p>- Offline capability for viewing registered events</p>
+    <p>- QR code check-in for events</p>
+
+    <h3 class="section-title">8.4 Analytics Dashboard</h3>
+    <p>The system could benefit from enhanced analytics:</p>
+    <p>- Detailed reports on participation rates across different sports</p>
+    <p>- Trend analysis over academic years</p>
+    <p>- Student engagement metrics</p>
+    <p>- Customizable dashboards for administrators</p>
+    <p>- Visual charts and graphs for data representation</p>
+
+    <h3 class="section-title">8.5 Payment Integration</h3>
+    <p>Future versions could include payment processing:</p>
+    <p>- Integration with payment gateways for paid events</p>
+    <p>- Secure payment processing for tournament fees</p>
+    <p>- Receipt generation and payment confirmation</p>
+    <p>- Financial reports and revenue tracking</p>
+</div>
+
+<!-- CHAPTER 9: CONCLUSION -->
+<div class="page">
+    <h2 class="chapter-title">CHAPTER 9: CONCLUSION</h2>
+
+    <p>The Sports Event Registration System (SportZone) has been successfully developed as a comprehensive web-based application for managing sports events and participant registrations in educational institutions.</p>
+
+    <p><strong>Summary of Achievements:</strong></p>
+    <p>1. <strong>Complete Functional System:</strong> All required features implemented including user registration, event management, registration system, and administrative approval workflows.</p>
+    <p>2. <strong>Robust Security:</strong> CSRF protection, password hashing, session management, and role-based access control implemented.</p>
+    <p>3. <strong>User-Friendly Interface:</strong> Modern dark-themed responsive design using Bootstrap 5.</p>
+    <p>4. <strong>Efficient Database Design:</strong> Well-structured database with proper relationships and constraints ensuring data integrity.</p>
+    <p>5. <strong>Real-Time Functionality:</strong> Immediate feedback through dynamic content updates and notifications.</p>
+
+    <p><strong>Project Impact:</strong></p>
+    <p>- Eliminated paper-based registration processes</p>
+    <p>- Provided 24/7 accessibility for students</p>
+    <p>- Enabled real-time event and registration tracking</p>
+    <p>- Streamlined administrative workflows</p>
+    <p>- Enhanced data security and accuracy</p>
+
+    <p><strong>Learning Outcomes:</strong></p>
+    <p>- Full-stack web development with PHP and MySQL</p>
+    <p>- Database design and management</p>
+    <p>- Web security best practices</p>
+    <p>- UI/UX design principles</p>
+    <p>- Project management and documentation</p>
+
+    <p>The SportZone system is deployed and accessible at: <strong>http://sportszones.infinityfree.me/sportzone/</strong></p>
+
+    <p>The project fulfills the requirements for a final year BCA project, showcasing technical competence, problem-solving skills, and the ability to develop a complete, production-ready software solution.</p>
+</div>
+
+<!-- REFERENCES -->
+<div class="page">
+    <h2 class="chapter-title">REFERENCES</h2>
+    <hr>
+    <div class="spacer"></div>
+
+    <p>[1] PHP Documentation. (2025). PHP 8.0 Reference Manual. https://www.php.net/docs.php</p>
+
+    <p>[2] MySQL Documentation. (2025). MySQL 8.0 Reference Manual. https://dev.mysql.com/doc/</p>
+
+    <p>[3] Bootstrap Documentation. (2025). Bootstrap 5.0 Getting Started. https://getbootstrap.com/docs/5.0/getting-started/introduction/</p>
+
+    <p>[4] W3Schools. (2025). PHP Tutorial. https://www.w3schools.com/php/</p>
+
+    <p>[5] OWASP. (2025). OWASP Top 10 Security Vulnerabilities. https://owasp.org/www-project-top-ten/</p>
+
+    <p>[6] PDO Documentation. (2025). PHP Data Objects. https://www.php.net/manual/en/book.pdo.php</p>
+
+    <p>[7] Session Management. (2025). PHP Sessions. https://www.php.net/manual/en/book.session.php</p>
+
+    <p>[8] password_hash() Function. (2025). PHP Password Hashing. https://www.php.net/manual/en/function.password-hash.php</p>
+
+    <p>[9] Bootstrap Icons. (2025). Icon Library. https://icons.getbootstrap.com/</p>
+
+    <p>[10] InfinityFree Hosting. (2025). Free Web Hosting. https://infinityfree.net/</p>
+</div>
+
+<!-- APPENDICES -->
+<div class="page">
+    <h2 class="chapter-title">APPENDICES</h2>
+    <hr>
+    <div class="spacer"></div>
+
+    <h3 class="section-title">APPENDIX A: DATABASE SCHEMA</h3>
+    <pre>-- Database: sportzone
+
+CREATE TABLE IF NOT EXISTS users (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  name VARCHAR(100) NOT NULL,
+  email VARCHAR(120) NOT NULL UNIQUE,
+  usn VARCHAR(20) NULL,
+  password VARCHAR(255) NOT NULL,
+  role ENUM('student','admin') NOT NULL DEFAULT 'student',
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+) ENGINE=InnoDB;
+
+CREATE TABLE IF NOT EXISTS events (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  name VARCHAR(150) NOT NULL,
+  sport_type VARCHAR(100) NOT NULL,
+  event_date DATE NOT NULL,
+  event_time TIME NOT NULL,
+  venue VARCHAR(150) NOT NULL,
+  max_slots INT NOT NULL,
+  description TEXT,
+  created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+) ENGINE=InnoDB;
+
+CREATE TABLE IF NOT EXISTS registrations (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  user_id INT NOT NULL,
+  event_id INT NOT NULL,
+  student_name VARCHAR(100) NOT NULL,
+  usn_number VARCHAR(20) NOT NULL,
+  contact_number VARCHAR(15) NOT NULL,
+  course VARCHAR(50) NOT NULL,
+  registered_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+  approval_status ENUM('pending', 'approved', 'rejected', 'cancelled')
+                 NOT NULL DEFAULT 'pending',
+  UNIQUE KEY unique_registration (user_id, event_id),
+  CONSTRAINT fk_reg_user FOREIGN KEY (user_id) REFERENCES users(id)
+                         ON DELETE CASCADE,
+  CONSTRAINT fk_reg_event FOREIGN KEY (event_id) REFERENCES events(id)
+                          ON DELETE CASCADE
+) ENGINE=InnoDB;</pre>
+
+    <h3 class="section-title">APPENDIX B: CONFIGURATION FILES</h3>
+    <p><strong>config/db.php:</strong></p>
+    <pre>&lt;?php
+$host = 'sql105.infinityfree.com';
+$dbname = 'if0_41887330_sportszones';
+$username = 'if0_41887330';
+$password = 'project@123';
+
+try {
+    $pdo = new PDO("mysql:host=$host;dbname=$dbname;charset=utf8mb4",
+                   $username, $password);
+    $pdo-&gt;setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    $pdo-&gt;setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
+} catch (PDOException $e) {
+    die('Database connection failed: ' . $e-&gt;getMessage());
+}
+?&gt;</pre>
+
+    <p><strong>config/admin_config.php:</strong></p>
+    <pre>&lt;?php
+define('ADMIN_EMAIL', 'teacher@gmail.com');
+?&gt;</pre>
+
+    <h3 class="section-title">APPENDIX C: FILE STRUCTURE</h3>
+    <pre>sportzone/
+├── config/
+│   ├── db.php
+│   └── admin_config.php
+├── includes/
+│   ├── auth.php
+│   ├── header.php
+│   └── footer.php
+├── assets/
+│   ├── css/style.css
+│   └── js/main.js
+├── sql/
+│   ├── sportzone.sql
+│   └── *.sql
+├── index.php
+├── login.php
+├── register.php
+├── dashboard.php
+├── admin_dashboard.php
+├── manage_events.php
+├── add_event.php
+├── edit_event.php
+├── delete_event.php
+├── register_event.php
+├── my_registrations.php
+├── cancel_registration.php
+├── manage_registrations.php
+├── view_registrations.php
+├── process_registration.php
+├── export_registrations.php
+├── admin_activity.php
+├── logout.php</pre>
+
+    <h3 class="section-title">APPENDIX D: HOSTING INFORMATION</h3>
+    <p><strong>Live URL:</strong> http://sportszones.infinityfree.me/sportzone/</p>
+
+    <p><strong>Hosting Provider:</strong> InfinityFree</p>
+    <p>- Database Host: sql105.infinityfree.com</p>
+    <p>- Database Name: if0_41887330_sportszones</p>
+    <p>- Database User: if0_41887330</p>
+</div>
+
+<!-- END OF DOCUMENT -->
+<div class="page">
+    <div class="double-spacer"></div>
+    <div class="double-spacer"></div>
+    <h2 class="center">END OF PROJECT REPORT</h2>
+    <div class="double-spacer"></div>
+    <p class="center">This project report is submitted in partial fulfillment of the requirements for the award of Bachelor of Computer Applications (BCA) degree.</p>
+    <div class="double-spacer"></div>
+    <div class="double-spacer"></div>
+    <div class="double-spacer"></div>
+    <hr>
+    <p class="center"><em>Page Count: Approximately 50-60 pages</em></p>
+</div>
+
+</body>
+</html>

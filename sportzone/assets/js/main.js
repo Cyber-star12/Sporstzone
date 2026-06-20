@@ -1,0 +1,1 @@
+document.addEventListener('DOMContentLoaded',()=>{document.querySelectorAll('.confirm-delete').forEach(btn=>{btn.addEventListener('click',e=>{if(!confirm('Are you sure you want to delete this?'))e.preventDefault();});});});
